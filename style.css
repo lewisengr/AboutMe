@@ -124,27 +124,34 @@ article > div {
   width: 300px;
   height: 0;
   background: rgba(2, 104, 148, 0.42);
+  /* blur effect for background */
   backdrop-filter: blur(15px);
   border-radius: 20px;
   overflow: hidden;
+  /* transition when opening menu */
   transition: height 0.3s cubic-bezier(1, 0, 0, 1);
 }
 
 .dropdown_menu a {
   color: #fff;
   font-weight: bold;
+  font-size: 30px;
 }
 
+/* expanded height when menu is open */
 .dropdown_menu.open {
-  height: 250px;
+  height: 345px;
 }
 
+/* properties for each list item */
 .dropdown_menu li {
   padding: 0.7rem;
   display: flex;
   justify-content: center;
+  white-space: nowrap;
 }
 
+/* ADD COMMENTS LATER */
 /* Responsive Design for smaller screens */
 @media (max-width: 992px) {
   /* hiding navbar links in mobile view */
@@ -170,7 +177,7 @@ article > div {
   }
 }
 
-/* ADD COMMENTS LATER */
+/* reduce height of beach image */
 @media (max-width: 768px) {
   .beach-image {
     height: 200px;

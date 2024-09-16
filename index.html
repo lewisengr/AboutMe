@@ -53,6 +53,7 @@
         </div>
       </div>
 
+      <!-- dropdown menu bar -->
       <div class="dropdown_menu">
         <li>
           <a href="/src/skills.html"><i>Skills</i></a>
@@ -76,17 +77,26 @@
     </header>
 
     <script>
+      // select the toggle button
       const toggleBtn = document.querySelector(".toggle_btn");
+      // select the icon inside toggle button
       const toggleBtnIcon = document.querySelector(".toggle_btn i");
+      // select the dropdown menu element
       const dropDownMenu = document.querySelector(".dropdown_menu");
 
+      // event listener to toggle button for click
       toggleBtn.onclick = function () {
+        // toggle the "open" class on dropdown menu to show or hide
         dropDownMenu.classList.toggle("open");
+        // check if menu has the "open" class
         const isOpen = dropDownMenu.classList.contains("open");
 
+        // update icon in toggle button using inline if statement if menu is open or closed
         toggleBtnIcon.classList = isOpen
-          ? "fa-solid fa-xmark"
-          : "fa-solid fa-bars";
+          ? // x mark if menu is open
+            "fa-solid fa-xmark"
+          : // menu bars if menu open is closed
+            "fa-solid fa-bars";
       };
     </script>
 
