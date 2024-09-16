@@ -112,7 +112,7 @@ article > div {
 .toggle_btn {
   display: none;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 3.5rem;
   cursor: pointer;
 }
 
@@ -174,18 +174,5 @@ article > div {
 @media (max-width: 768px) {
   .beach-image {
     height: 200px;
-  }
-}
-
-@media (max-width: 576px) {
-  .beach-image {
-    height: 150px;
-  }
-}
-
-@media (max-width: 400px) {
-  .beach-image {
-    height: 120px;
-    background-size: contain;
   }
 }
