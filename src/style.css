@@ -83,7 +83,7 @@ body {
 
 /* style for the beach image */
 .beach-image {
-  background: url(images/pretty-beach-5e5g29dp3opyakdx.jpg);
+  background: url(/images/pretty-beach-5e5g29dp3opyakdx.jpg);
   background-size: cover;
   background-position: center;
   height: 300px;
