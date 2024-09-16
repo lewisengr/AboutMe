@@ -12,6 +12,14 @@
     <meta name="author" content="Dylan Lewis" />
     <!-- title for webpage -->
     <title>About Dylan Lewis</title>
+    <!-- responsive cdnjs cloudflare for dropdown menu bar  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- reference to CSS file -->
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -31,15 +39,56 @@
       <a href="index.html" class="name">Dylan Lewis</a>
 
       <!-- navigation links for different pages of the website -->
-      <nav class="navbar">
-        <a href="/src/skills.html"><i>Skills</i></a>
-        <a href="/src/photos.html"><i>Photos</i></a>
-        <a href="/src/hobbies.html"><i>Hobbies</i></a>
-        <a href="/src/events.html"><i>Important Events</i></a>
-        <a href="/src/worldview.html"><i>Christian Worldview</i></a>
-        <a href="/src/contact.html"><i>Contact</i></a>
-      </nav>
+      <div class="navbar">
+        <nav>
+          <a href="/src/skills.html"><i>Skills</i></a>
+          <a href="/src/photos.html"><i>Photos</i></a>
+          <a href="/src/hobbies.html"><i>Hobbies</i></a>
+          <a href="/src/events.html"><i>Important Events</i></a>
+          <a href="/src/worldview.html"><i>Christian Worldview</i></a>
+          <a href="/src/contact.html"><i>Contact</i></a>
+        </nav>
+        <div class="toggle_btn" style="margin-left: 5%">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+
+      <div class="dropdown_menu">
+        <li>
+          <a href="/src/skills.html"><i>Skills</i></a>
+        </li>
+        <li>
+          <a href="/src/photos.html"><i>Photos</i></a>
+        </li>
+        <li>
+          <a href="/src/hobbies.html"><i>Hobbies</i></a>
+        </li>
+        <li>
+          <a href="/src/events.html"><i>Important Events</i></a>
+        </li>
+        <li>
+          <a href="/src/worldview.html"><i>Christian Worldview</i></a>
+        </li>
+        <li>
+          <a href="/src/contact.html"><i>Contact</i></a>
+        </li>
+      </div>
     </header>
+
+    <script>
+      const toggleBtn = document.querySelector(".toggle_btn");
+      const toggleBtnIcon = document.querySelector(".toggle_btn i");
+      const dropDownMenu = document.querySelector(".dropdown_menu");
+
+      toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle("open");
+        const isOpen = dropDownMenu.classList.contains("open");
+
+        toggleBtnIcon.classList = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
+    </script>
 
     <!-- picture of beach -->
     <div class="beach-image"></div>
