@@ -222,7 +222,7 @@ article > div {
 }
 
 .friends-1 {
-  background: url(/images/IMG_3839.JPEG);
+  background: url(images/IMG_3839.JPEG);
   background-size: cover;
   background-position: center;
   border-radius: 30px;
@@ -232,7 +232,7 @@ article > div {
 }
 
 .friends-2 {
-  background: url(/images/IMG_6033.JPEG);
+  background: url(images/IMG_6033.JPEG);
   background-size: cover;
   background-position: center;
   border-radius: 30px;
