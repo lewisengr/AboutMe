@@ -21,6 +21,7 @@ body {
   background: rgb(2, 104, 148);
   display: flex;
   align-items: center;
+  z-index: 1000;
 }
 
 /* removes underline from all the links inside the navbar and header */
@@ -215,8 +216,19 @@ article > div {
   width: 100%;
   margin-top: 75px;
   padding: 0 20px;
-  background-color: #f0f0f0;
-  border: 2px solid #ccc;
+  background-color: #d9d7d7af;
+  border: 3px solid #f3eded7f;
+}
+
+.family-1 .overlap-text {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 42px;
+  text-shadow: 2px 2px 4px rgba(169, 100, 100, 0.619);
+  white-space: nowrap;
 }
 
 .friends-container {
@@ -227,13 +239,14 @@ article > div {
 
 .friends-wrapper {
   padding: 20px;
-  background-color: #f0f0f0;
-  border: 2px solid #ccc;
-  border-radius: 30px;
+  background-color: #d9d7d7af;
+  border: 4px solid #c6b9b9a0;
+  border-radius: 35px;
   width: 45%;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .friends-1 {
@@ -243,6 +256,7 @@ article > div {
   border-radius: 20px;
   height: 500px;
   width: 100%;
+  position: relative;
 }
 
 .friends-2 {
@@ -252,6 +266,18 @@ article > div {
   border-radius: 20px;
   height: 500px;
   width: 100%;
+  position: relative;
+}
+
+.overlap-text {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  font-size: 24px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  font-weight: bold;
 }
 
 /* .family-1 {
