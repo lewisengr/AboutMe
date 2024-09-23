@@ -205,7 +205,56 @@ article > div {
   width: 100%;
 } */
 
+/* REMOVE COMMENTS & MESS WITH DISPLAY AND JUSTIFY CONTENT */
 .family-1 {
+  background: url(images/IMG_3560.JPEG);
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  height: 700px;
+  width: 100%;
+  margin-top: 75px;
+  padding: 0 20px;
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+}
+
+.friends-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 3% 35px;
+}
+
+.friends-wrapper {
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+  border-radius: 30px;
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.friends-1 {
+  background: url(images/IMG_3839.JPEG);
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  height: 500px;
+  width: 100%;
+}
+
+.friends-2 {
+  background: url(images/IMG_6033.JPEG);
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  height: 500px;
+  width: 100%;
+}
+
+/* .family-1 {
   background: url(images/IMG_3560.JPEG);
   background-size: cover;
   background-position: center;
@@ -239,4 +288,4 @@ article > div {
   height: 550px;
   width: 45%;
   margin-left: auto;
-}
+} */
