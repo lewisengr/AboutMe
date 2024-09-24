@@ -11,7 +11,7 @@ body {
   margin: 0;
 }
 
-/* defining header properties such as the position, height, width, and color.  */
+/* defining header properties such as the position, height, width, and color */
 .header {
   position: fixed;
   top: 0;
@@ -35,7 +35,7 @@ body {
   font-size: 32px;
   color: #fff;
   font-weight: 600;
-  padding: 0 1.5em;
+  padding: 0 1em;
   will-change: filter;
   transition: filter 300ms;
   flex-basis: 300px;
@@ -96,7 +96,8 @@ body {
   background-position: center;
   height: 300px;
   width: 100%;
-  margin-top: 75px;
+  margin-top: 70px;
+  border-bottom: 3px solid rgba(0, 86, 123, 0.459);
 }
 
 /* style for the article content with paragraphs */
