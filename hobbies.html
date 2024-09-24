@@ -38,7 +38,7 @@
           <a href="hobbies.html"><i>Hobbies</i></a>
           <a href="events.html"><i>Important Events</i></a>
           <a href="worldview.html"><i>Christian Worldview</i></a>
-          <a href="contact.html"><i>Contact</i></a>
+          <a id="openContactModal"><i>Contact</i></a>
         </nav>
         <div class="toggle_btn" style="margin-left: 5%">
           <i class="fa-solid fa-bars"></i>
@@ -63,38 +63,102 @@
           <a href="worldview.html"><i>Christian Worldview</i></a>
         </li>
         <li>
-          <a href="contact.html"><i>Contact</i></a>
+          <a id="openContactModalDropdown"><i>Contact</i></a>
         </li>
       </div>
     </header>
 
+    <div id="contactModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Contact Information</h2>
+        <p>
+          <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank"
+            ><img
+              src="images/googleemailicon2.png"
+              alt="google-email icon"
+              class="contact-icon"
+          /></a>
+          <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank"
+            >disneydylan1@gmail.com</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://www.linkedin.com/in/dylan-lewis-b037a1286"
+            target="_blank"
+            ><img
+              src="images/linkedinimg.png"
+              alt="linkedin-contact icon"
+              class="contact-icon"
+          /></a>
+          <a
+            href="https://www.linkedin.com/in/dylan-lewis-b037a1286"
+            target="_blank"
+            >LinkedIn</a
+          >
+        </p>
+        <p>
+          <a href="https://github.com/lewisengr" target="_blank"
+            ><img
+              src="images/githubimg.png"
+              alt="github-contact icon"
+              class="contact-icon"
+          /></a>
+          <a href="https://github.com/lewisengr" target="_blank">Github</a>
+        </p>
+      </div>
+    </div>
+
     <script>
       // select the toggle button
       const toggleBtn = document.querySelector(".toggle_btn");
-      // select the icon inside toggle button
       const toggleBtnIcon = document.querySelector(".toggle_btn i");
-      // select the dropdown menu element
       const dropDownMenu = document.querySelector(".dropdown_menu");
 
-      // event listener to toggle button for click
       toggleBtn.onclick = function () {
-        // toggle the "open" class on dropdown menu to show or hide
         dropDownMenu.classList.toggle("open");
-        // check if menu has the "open" class
         const isOpen = dropDownMenu.classList.contains("open");
-
-        // update icon in toggle button using inline if statement if menu is open or closed
         toggleBtnIcon.classList = isOpen
-          ? // x mark if menu is open
-            "fa-solid fa-xmark"
-          : // menu bars if menu open is closed
-            "fa-solid fa-bars";
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
+
+      // Modal functionality
+      const modal = document.getElementById("contactModal");
+      const openModalBtn = document.getElementById("openContactModal");
+      const openModalBtnDropdown = document.getElementById(
+        "openContactModalDropdown"
+      );
+      const closeModalBtn = document.querySelector(".close");
+
+      if (openModalBtn) {
+        openModalBtn.onclick = function () {
+          modal.style.display = "block";
+          dropDownMenu.classList.remove("open"); // Close the dropdown menu
+          toggleBtnIcon.classList = "fa-solid fa-bars";
+        };
+      }
+
+      if (openModalBtnDropdown) {
+        openModalBtnDropdown.onclick = function () {
+          modal.style.display = "block";
+          dropDownMenu.classList.remove("open"); // Close the dropdown menu
+          toggleBtnIcon.classList = "fa-solid fa-bars";
+        };
+      }
+
+      if (closeModalBtn) {
+        closeModalBtn.onclick = function () {
+          modal.style.display = "none";
+        };
+      }
+
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
       };
     </script>
-
-    <div style="margin-top: 9%; margin-left: 3%">
-      <h1>HOBBIES PAGE</h1>
-      <p><a href="index.html">Home Page</a></p>
-    </div>
   </body>
 </html>
