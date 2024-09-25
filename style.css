@@ -205,12 +205,58 @@ article > div {
   }
 }
 
-/* .coding-image {
+.coding-image {
   background: url(/images/1683310242348.jpg);
   background-size: cover;
   height: 500px;
   width: 100%;
-} */
+  background-position: center;
+  position: relative;
+  border-bottom: 3px solid rgb(82, 150, 179);
+}
+
+.skills-overlay {
+  position: absolute;
+  margin-top: 17%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.578);
+  padding: 30px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  text-align: center;
+  width: 45%;
+}
+
+.skills-overlay h3 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #333;
+}
+
+.skills-overlay table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.skills-overlay th,
+.skills-overlay td {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.822);
+  border: 1.5px solid #1f1818;
+}
+
+.skills-overlay th {
+  font-weight: bold;
+}
+
+section {
+  scroll-margin-top: 100px;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
 
 /* REMOVE COMMENTS & MESS WITH DISPLAY AND JUSTIFY CONTENT */
 .family-1 {

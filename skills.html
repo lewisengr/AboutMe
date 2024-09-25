@@ -132,9 +132,19 @@
       );
       const closeModalBtn = document.querySelector(".close");
 
+      function openModal() {
+        modal.style.display = "block";
+        document.body.classList.add("no-scroll");
+      }
+
+      function closeModal() {
+        modal.style.display = "none";
+        document.body.classList.remove("no-scroll");
+      }
+
       if (openModalBtn) {
         openModalBtn.onclick = function () {
-          modal.style.display = "block";
+          openModal();
           dropDownMenu.classList.remove("open"); // Close the dropdown menu
           toggleBtnIcon.classList = "fa-solid fa-bars";
         };
@@ -142,7 +152,7 @@
 
       if (openModalBtnDropdown) {
         openModalBtnDropdown.onclick = function () {
-          modal.style.display = "block";
+          openModal();
           dropDownMenu.classList.remove("open"); // Close the dropdown menu
           toggleBtnIcon.classList = "fa-solid fa-bars";
         };
@@ -150,15 +160,72 @@
 
       if (closeModalBtn) {
         closeModalBtn.onclick = function () {
-          modal.style.display = "none";
+          closeModal();
         };
       }
 
       window.onclick = function (event) {
         if (event.target == modal) {
-          modal.style.display = "none";
+          closeModal(); // Close modal if clicking outside of it
         }
       };
     </script>
+
+    <div class="coding-image">
+      <div class="skills-overlay">
+        <h1><i>Important Skills</i></h1>
+        <table border="4">
+          <thead>
+            <tr style="font-size: 20px">
+              <th><a href="#programming-section">Programming</a></th>
+              <th><a href="#athleticism-section">Athleticism</a></th>
+              <th><a href="#leadership-section">Leadership</a></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="font-size: 18px">
+              <td>Innovative</td>
+              <td>Sports</td>
+              <td>Public Speaking</td>
+            </tr>
+            <tr style="font-size: 18px">
+              <td>Problem Solver</td>
+              <td>Weightlifting</td>
+              <td>Intelligent</td>
+            </tr>
+            <tr style="font-size: 18px">
+              <td>Passionate</td>
+              <td>Strength</td>
+              <td>Confident</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <article>
+      <div
+        id="programming-section"
+        style="border-color: rgba(157, 189, 203, 0.582)"
+      >
+        <h3><i>Computer Programming Skills</i></h3>
+        <p>here</p>
+      </div>
+      <br />
+      <div
+        id="athleticism-section"
+        style="border-color: rgba(157, 189, 203, 0.582)"
+      >
+        <h3><i>Athletic Skills</i></h3>
+        <p>here</p>
+      </div>
+      <br />
+      <div
+        id="leadership-section"
+        style="border-color: rgba(157, 189, 203, 0.582)"
+      >
+        <h3><i>Leadership Skills</i></h3>
+        <p>here</p>
+      </div>
+    </article>
   </body>
 </html>
