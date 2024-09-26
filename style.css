@@ -58,8 +58,8 @@ body {
   position: relative;
   font-size: 18px;
   color: #fff;
-  font-weight: 600;
-  margin-left: 60px;
+  /* font-weight: 100; */
+  margin-left: 55px;
 }
 
 /* hover effect for the navbar links */
@@ -75,7 +75,7 @@ body {
   /* thickness of the underline animation */
   height: 2px;
   /* color of underline animation */
-  background: #fff;
+  background: #ffffffaf;
   /* smooth transition for hover of 0.3s */
   transition: 0.3s;
 }
@@ -88,6 +88,19 @@ body {
 .navbar a,
 .dropdown_menu li a {
   cursor: pointer;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  /* font-style: italic; */
+  font-weight: 600;
+}
+
+.nav-link.active {
+  /* text-decoration: underline; */
+  font-style: italic;
+  color: #f7fff6a6;
 }
 
 /* style for the beach image */
