@@ -11,6 +11,7 @@ body {
   margin: 0;
 }
 
+/* --- HOME (INDEX) PAGE --- */
 /* defining header properties such as the position, height, width, and color */
 .header {
   position: fixed;
@@ -94,7 +95,7 @@ body {
   background: url(images/pretty-beach-5e5g29dp3opyakdx.jpg);
   background-size: cover;
   background-position: center;
-  height: 300px;
+  height: 350px;
   width: 100%;
   margin-top: 70px;
   border-bottom: 3px solid rgba(0, 86, 123, 0.459);
@@ -123,7 +124,7 @@ article > div {
   cursor: pointer;
 }
 
-/* Dropdown Menu */
+/* --- DROPDOWN MENU --- */
 .dropdown_menu {
   position: absolute;
   right: 2rem;
@@ -158,8 +159,7 @@ article > div {
   white-space: nowrap;
 }
 
-/* ADD COMMENTS LATER */
-/* Responsive Design for smaller screens */
+/* RESPONSIVE DESIGNS for smaller screens */
 @media (max-width: 992px) {
   /* hiding navbar links in mobile view */
   .navbar nav {
@@ -196,31 +196,27 @@ article > div {
     height: 200px;
   }
 
-  .friends-1 {
-    height: 200px;
-  }
-
-  .friends-2 {
+  .friends-1-2 {
     height: 200px;
   }
 }
 
-.coding-image {
-  background: url(images/1683310242348.jpg);
+/* --- SKILLS PAGE --- */
+.skills-images {
   background-size: cover;
-  height: 500px;
+  height: 600px;
   width: 100%;
   background-position: center;
   position: relative;
-  border-bottom: 3px solid rgb(82, 150, 179);
+  border: 2px solid rgba(0, 0, 0, 0.792);
 }
 
 .skills-overlay {
   position: absolute;
-  margin-top: 17%;
+  margin-top: 19.5%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(255, 255, 255, 0.578);
+  background: rgba(255, 255, 255, 0.527);
   padding: 30px;
   border-radius: 10px;
   backdrop-filter: blur(5px);
@@ -242,7 +238,7 @@ article > div {
 .skills-overlay th,
 .skills-overlay td {
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.822);
+  background-color: rgba(255, 255, 255, 0.708);
   border: 1.5px solid #1f1818;
 }
 
@@ -258,28 +254,28 @@ section {
   overflow: hidden;
 }
 
-/* REMOVE COMMENTS & MESS WITH DISPLAY AND JUSTIFY CONTENT */
+/* --- PHOTOS PAGE --- */
 .family-1 {
   background: url(images/IMG_3560.JPEG);
   background-size: cover;
   background-position: center;
   border-radius: 20px;
-  height: 700px;
+  height: 550px;
   width: 100%;
   margin-top: 75px;
   padding: 0 20px;
-  /* background-color: #d9d7d7af; */
-  border: 3px solid #f3eded7f;
+  border: 3px solid #f3ededa3;
 }
 
+/* specific styles for family-1 */
 .family-1 .overlap-text {
   position: absolute;
   top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: rgb(255, 255, 255);
-  font-size: 42px;
-  text-shadow: 2px 2px 4px rgba(169, 100, 100, 0.75);
+  font-size: 40px;
+  text-shadow: 2px 2px 4px rgba(125, 87, 87, 0.76);
   white-space: nowrap;
 }
 
@@ -290,88 +286,40 @@ section {
 }
 
 .friends-wrapper {
+  flex: 1;
   padding: 20px;
   background-color: #d9d7d7af;
   border: 4px solid #c6b9b9a0;
   border-radius: 35px;
-  width: 45%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  margin: 0 25px;
   position: relative;
 }
 
-.friends-1 {
-  background: url(images/IMG_3839.JPEG);
+.friends-images {
   background-size: cover;
   background-position: center;
   border-radius: 20px;
-  height: 500px;
-  width: 100%;
-  position: relative;
-}
-
-.friends-2 {
-  background: url(images/IMG_6033.JPEG);
-  background-size: cover;
-  background-position: center;
-  border-radius: 20px;
-  height: 500px;
+  height: 400px;
   width: 100%;
   position: relative;
 }
 
 .overlap-text {
   position: absolute;
-  top: 20px;
-  left: 20px;
-  color: rgb(246, 245, 245);
-  font-size: 24px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin: 15px;
+  color: white;
+  font-size: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.607);
   z-index: 1;
   font-weight: bold;
-  background-color: rgba(215, 220, 212, 0.699);
+  background-color: rgba(223, 227, 221, 0.432);
   padding: 10px;
   border-radius: 10px;
 }
 
-/* .family-1 {
-  background: url(images/IMG_3560.JPEG);
-  background-size: cover;
-  background-position: center;
-  border-radius: 20px;
-  height: 700px;
-  width: 100%;
-  margin-top: 75px;
-}
-
-.friends-container {
-  display: flex;
-  justify-content: space-between;
-  margin: 3% 35px;
-}
-
-.friends-1 {
-  background: url(images/IMG_3839.JPEG);
-  background-size: cover;
-  background-position: center;
-  border-radius: 30px;
-  height: 550px;
-  width: 45%;
-  margin-right: auto;
-}
-
-.friends-2 {
-  background: url(images/IMG_6033.JPEG);
-  background-size: cover;
-  background-position: center;
-  border-radius: 30px;
-  height: 550px;
-  width: 45%;
-  margin-left: auto;
-} */
-
-/* MODAL CONTAINER */
+/* --- MODAL CONTAINER FOR CONTACT INFO --- */
 .modal {
   display: none;
   position: fixed;
