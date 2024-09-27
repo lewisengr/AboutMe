@@ -103,6 +103,31 @@ body {
   color: #f7fff6a6;
 }
 
+.info-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 3% 35px;
+}
+
+.info-wrapper {
+  flex: 1;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border: 2px solid #c6c6c6;
+  border-radius: 15px;
+  margin: 0 20px;
+}
+
+.home-text {
+  background-color: #a5e2e323;
+  border-radius: 20px;
+  padding: 25px;
+  width: 100%;
+  font-size: 23px;
+  color: #333;
+  line-height: 1.4;
+}
+
 /* style for the beach image */
 .beach-image {
   background: url(images/pretty-beach-5e5g29dp3opyakdx.jpg);
@@ -231,10 +256,32 @@ article > div {
   transform: translate(-50%, -50%);
   background: rgba(255, 255, 255, 0.527);
   padding: 30px;
-  border-radius: 10px;
+  border-radius: 15px;
   backdrop-filter: blur(5px);
   text-align: center;
   width: 45%;
+}
+
+.texts-sections {
+  position: absolute;
+  margin-top: 16.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.527);
+  padding: 30px;
+  border-radius: 18px;
+  backdrop-filter: blur(2.5px);
+  text-align: center;
+  width: 45%;
+  line-height: 1.4;
+}
+
+.texts-sections p {
+  font-size: 22px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.815);
+  border: 1.5px solid #1f1818;
+  border-radius: 10px;
 }
 
 .skills-overlay h3 {
@@ -251,7 +298,7 @@ article > div {
 .skills-overlay th,
 .skills-overlay td {
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.708);
+  background-color: rgba(255, 255, 255, 0.838);
   border: 1.5px solid #1f1818;
 }
 
