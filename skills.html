@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- meta tags such as charset, viewport, description, and author to give further info about the photos page-->
     <meta charset="UTF-8" />
     <link rel="icon" type="image/x-icon" href="images/Image1.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- UPDATE META TAGS HERE --------------------------- -->
+    <meta name="author" content="Dylan Lewis" />
     <meta
       name="description"
       contents="Skills page showing my computer programming skills, my athletic skills and abilities, and my leadership skills"
     />
-    <meta name="author" content="Dylan Lewis" />
     <title>My Skills</title>
     <!-- responsive cdnjs cloudflare for dropdown menu bar  -->
     <link
@@ -138,41 +138,47 @@
       );
       const closeModalBtn = document.querySelector(".close");
 
+      // method to open modal
       function openModal() {
         modal.style.display = "block";
         document.body.classList.add("no-scroll");
       }
 
+      // method to close modal
       function closeModal() {
         modal.style.display = "none";
         document.body.classList.remove("no-scroll");
       }
 
+      // event listener for button that opens modal from main
       if (openModalBtn) {
         openModalBtn.onclick = function () {
           openModal();
-          dropDownMenu.classList.remove("open"); // Close the dropdown menu
+          dropDownMenu.classList.remove("open");
           toggleBtnIcon.classList = "fa-solid fa-bars";
         };
       }
 
+      // event listener for button that opens modal from dropdown menu
       if (openModalBtnDropdown) {
         openModalBtnDropdown.onclick = function () {
           openModal();
-          dropDownMenu.classList.remove("open"); // Close the dropdown menu
+          dropDownMenu.classList.remove("open");
           toggleBtnIcon.classList = "fa-solid fa-bars";
         };
       }
 
+      // event listener for the button that closes the modal
       if (closeModalBtn) {
         closeModalBtn.onclick = function () {
           closeModal();
         };
       }
 
+      // event listener for clicking outside of modal to close it
       window.onclick = function (event) {
         if (event.target == modal) {
-          closeModal(); // Close modal if clicking outside of it
+          closeModal();
         }
       };
     </script>
@@ -181,6 +187,7 @@
       class="skills-images"
       style="background-image: url(images/codingimage2.jpg)"
     >
+      <!-- skills table and text -->
       <div class="skills-overlay">
         <h1 style="font-size: 36px"><i>Important Skills</i></h1>
         <table border="4">
@@ -211,7 +218,7 @@
         </table>
       </div>
     </div>
-
+    <!-- programming image and skills text section -->
     <div
       class="skills-images"
       style="background-image: url(images/1683310242348.jpg)"
@@ -253,7 +260,7 @@
         </div>
       </article>
     </div>
-
+    <!-- athletic image and skills text section -->
     <div
       class="skills-images"
       style="background-image: url(images/dumbbellsimg.webp)"
@@ -277,6 +284,7 @@
         </div>
       </article>
     </div>
+    <!-- leadership image and skills text section -->
     <div
       class="skills-images"
       style="background-image: url(images/leadershipimg2.jpg)"

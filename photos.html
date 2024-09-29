@@ -8,7 +8,7 @@
     <meta name="author" content="Dylan Lewis" />
     <meta
       name="description"
-      content="Photos page of favorite photos/memories"
+      content="Photos page of favorite photos/memories of friends, family, and pets"
     />
     <!-- title for webpage -->
     <title>Favorite Photos</title>
@@ -37,7 +37,6 @@
       </a>
       <!-- primary hyperlink tag for user to get to the home page easily -->
       <a href="index.html" class="name">Dylan Lewis</a>
-
       <!-- navigation links for different pages of the website -->
       <div class="navbar">
         <nav>
@@ -52,7 +51,6 @@
           <i class="fa-solid fa-bars"></i>
         </div>
       </div>
-
       <!-- dropdown menu bar -->
       <div class="dropdown_menu">
         <li>
@@ -116,6 +114,7 @@
         </p>
       </div>
     </div>
+    <!-- embed client-side JS code -->
     <script>
       // select the toggle button
       const toggleBtn = document.querySelector(".toggle_btn");
@@ -138,24 +137,28 @@
       );
       const closeModalBtn = document.querySelector(".close");
 
+      // method to open modal
       function openModal() {
         modal.style.display = "block";
         document.body.classList.add("no-scroll");
       }
 
+      // method to close the modal
       function closeModal() {
         modal.style.display = "none";
         document.body.classList.remove("no-scroll");
       }
 
+      // event listener for the button that opens modal from main
       if (openModalBtn) {
         openModalBtn.onclick = function () {
           openModal();
-          dropDownMenu.classList.remove("open"); // Close the dropdown menu
+          dropDownMenu.classList.remove("open");
           toggleBtnIcon.classList = "fa-solid fa-bars";
         };
       }
 
+      // event listener for the button that opens modal from dropdown menu
       if (openModalBtnDropdown) {
         openModalBtnDropdown.onclick = function () {
           openModal();
@@ -164,15 +167,17 @@
         };
       }
 
+      // event listener for the button that closes modal
       if (closeModalBtn) {
         closeModalBtn.onclick = function () {
           closeModal();
         };
       }
 
+      // event listener for clicking outside modal to close it
       window.onclick = function (event) {
         if (event.target == modal) {
-          closeModal(); // Close modal if clicking outside of it
+          closeModal();
         }
       };
     </script>
@@ -181,6 +186,7 @@
     <div class="family-1">
       <div class="overlap-text">Family at Puerto Vallarta</div>
     </div>
+    <!-- friends-container consists of the two images side by side (cabo and dinner) -->
     <!-- CABO AND DINNER -->
     <div class="friends-container">
       <div class="friends-wrapper">
@@ -244,7 +250,6 @@
         </div>
       </div>
     </div>
-
     <!-- HIKING AND CRUISE SUNSET VIDEO -->
     <div class="friends-container">
       <!-- HIKING -->
@@ -282,7 +287,6 @@
         </div>
       </div>
     </div>
-
     <!-- GRADUATION VIDEO AND PICTURE -->
     <div class="friends-container">
       <div class="friends-wrapper" style="height: 525px">

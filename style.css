@@ -249,6 +249,7 @@ article > div {
   border: 2px solid rgba(0, 0, 0, 0.792);
 }
 
+/* overlay skills images with text */
 .skills-overlay {
   position: absolute;
   margin-top: 19.5%;
@@ -262,6 +263,7 @@ article > div {
   width: 45%;
 }
 
+/* text section used to display content over the images */
 .texts-sections {
   position: absolute;
   margin-top: 16.5%;
@@ -276,6 +278,7 @@ article > div {
   line-height: 1.4;
 }
 
+/* paragraph specificity for the texts sections */
 .texts-sections p {
   font-size: 22px;
   padding: 20px;
@@ -284,17 +287,20 @@ article > div {
   border-radius: 10px;
 }
 
+/* specific heading styles */
 .skills-overlay h3 {
   margin-bottom: 20px;
   font-size: 28px;
   color: #333;
 }
 
+/* table within skills overlay */
 .skills-overlay table {
   width: 100%;
   border-collapse: collapse;
 }
 
+/* specific styles for table headers and cells */
 .skills-overlay th,
 .skills-overlay td {
   padding: 20px;
@@ -302,19 +308,23 @@ article > div {
   border: 1.5px solid #1f1818;
 }
 
+/* styling for table header */
 .skills-overlay th {
   font-weight: bold;
 }
 
+/* adjusted scrolling position to prevent covered content */
 section {
   scroll-margin-top: 100px;
 }
 
+/* prevent body scrolling when modal is open */
 .no-scroll {
   overflow: hidden;
 }
 
 /* --- PHOTOS PAGE --- */
+/* background and layout for first family image (puerto vallarta) */
 .family-1 {
   background: url(images/IMG_3560.JPEG);
   background-size: cover;
@@ -327,7 +337,7 @@ section {
   border: 3px solid #f3ededa3;
 }
 
-/* specific styles for family-1 */
+/* specific styles for overlay text */
 .family-1 .overlap-text {
   position: absolute;
   top: 20%;
@@ -339,12 +349,14 @@ section {
   white-space: nowrap;
 }
 
+/* container styles for friends section */
 .friends-container {
   display: flex;
   justify-content: space-between;
   margin: 3% 35px;
 }
 
+/* wrapper for each card (or overall image) */
 .friends-wrapper {
   flex: 1;
   padding: 20px;
@@ -357,6 +369,7 @@ section {
   position: relative;
 }
 
+/* image styling within each wrapper */
 .friends-images {
   background-size: cover;
   background-position: center;
@@ -366,6 +379,7 @@ section {
   position: relative;
 }
 
+/* basic text overlay for images */
 .overlap-text {
   position: absolute;
   margin: 15px;
