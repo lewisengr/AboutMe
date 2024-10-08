@@ -369,6 +369,11 @@ section {
   position: relative;
 }
 
+/* adds animation for images moving when mouse is hovered over */
+.friends-wrapper:hover .friends-images {
+  transform: scale(1.035);
+}
+
 /* image styling within each wrapper */
 .friends-images {
   background-size: cover;
@@ -377,6 +382,7 @@ section {
   height: 400px;
   width: 100%;
   position: relative;
+  transition: transform 0.3s ease;
 }
 
 /* basic text overlay for images */
