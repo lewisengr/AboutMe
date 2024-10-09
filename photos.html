@@ -114,80 +114,13 @@
         </p>
       </div>
     </div>
-    <script>
-      // select the toggle button
-      const toggleBtn = document.querySelector(".toggle_btn");
-      const toggleBtnIcon = document.querySelector(".toggle_btn i");
-      const dropDownMenu = document.querySelector(".dropdown_menu");
-
-      toggleBtn.onclick = function () {
-        dropDownMenu.classList.toggle("open");
-        const isOpen = dropDownMenu.classList.contains("open");
-        toggleBtnIcon.classList = isOpen
-          ? "fa-solid fa-xmark"
-          : "fa-solid fa-bars";
-      };
-
-      // Modal functionality
-      const modal = document.getElementById("contactModal");
-      const openModalBtn = document.getElementById("openContactModal");
-      const openModalBtnDropdown = document.getElementById(
-        "openContactModalDropdown"
-      );
-      const closeModalBtn = document.querySelector(".close");
-
-      // method to open modal
-      function openModal() {
-        modal.style.display = "block";
-        document.body.classList.add("no-scroll");
-      }
-
-      // method to close the modal
-      function closeModal() {
-        modal.style.display = "none";
-        document.body.classList.remove("no-scroll");
-      }
-
-      // event listener for the button that opens modal from main
-      if (openModalBtn) {
-        openModalBtn.onclick = function () {
-          openModal();
-          dropDownMenu.classList.remove("open");
-          toggleBtnIcon.classList = "fa-solid fa-bars";
-        };
-      }
-
-      // event listener for the button that opens modal from dropdown menu
-      if (openModalBtnDropdown) {
-        openModalBtnDropdown.onclick = function () {
-          openModal();
-          dropDownMenu.classList.remove("open"); // Close the dropdown menu
-          toggleBtnIcon.classList = "fa-solid fa-bars";
-        };
-      }
-
-      // event listener for the button that closes modal
-      if (closeModalBtn) {
-        closeModalBtn.onclick = function () {
-          closeModal();
-        };
-      }
-
-      // event listener for clicking outside modal to close it
-      window.onclick = function (event) {
-        if (event.target == modal) {
-          closeModal();
-        }
-      };
-    </script>
-
     <!-- MAIN FAMILY PHOTO IMAGE -->
     <div class="family-1">
       <div class="overlap-text">Family at Puerto Vallarta</div>
     </div>
     <!-- friends-container consists of the two images side by side (cabo and dinner) -->
     <!-- CABO AND DINNER -->
-    <div class="friends-container">
+    <div class="friends-container fade-init">
       <div class="friends-wrapper">
         <div
           class="friends-images"
@@ -213,7 +146,7 @@
       </div>
     </div>
     <!-- MIRAGE AND TESSA -->
-    <div class="friends-container">
+    <div class="friends-container fade-init">
       <!-- Mirage Image -->
       <div class="friends-wrapper" style="height: 650px">
         <div
@@ -250,7 +183,7 @@
       </div>
     </div>
     <!-- HIKING AND CRUISE SUNSET VIDEO -->
-    <div class="friends-container">
+    <div class="friends-container fade-init">
       <!-- HIKING -->
       <div class="friends-wrapper" style="height: 600px">
         <div
@@ -287,7 +220,7 @@
       </div>
     </div>
     <!-- GRADUATION VIDEO AND PICTURE -->
-    <div class="friends-container">
+    <div class="friends-container fade-init">
       <div class="friends-wrapper" style="height: 525px">
         <div class="overlap-text" style="margin-top: 15px">
           <a
@@ -320,5 +253,7 @@
         </div>
       </div>
     </div>
+
+    <script src="main.js"></script>
   </body>
 </html>

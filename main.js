@@ -6,9 +6,7 @@ const dropDownMenu = document.querySelector(".dropdown_menu");
 toggleBtn.onclick = function () {
   dropDownMenu.classList.toggle("open");
   const isOpen = dropDownMenu.classList.contains("open");
-  toggleBtnIcon.classList = isOpen
-    ? "fa-solid fa-xmark"
-    : "fa-solid fa-bars";
+  toggleBtnIcon.classList = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
 };
 
 // Modal functionality
@@ -62,3 +60,24 @@ window.onclick = function (event) {
     closeModal();
   }
 };
+
+// fade-in class to .friends-container when page loads
+document.addEventListener("DOMContentLoaded", function () {
+  // for specifically friends-container elements
+  const friendsContainers = document.querySelectorAll(".friends-container");
+  friendsContainers.forEach((container, index) => {
+    setTimeout(() => {
+      container.classList.remove("fade-init");
+      container.classList.add("fade-in");
+    }, index * 1000); // timing for stagger effect
+  });
+
+  // Handle fade-in for fade-init elements
+  const fadeInitElements = document.querySelectorAll(".fade-init");
+  fadeInitElements.forEach((element, index) => {
+    setTimeout(() => {
+      element.classList.remove("fade-init");
+      element.classList.add("fade-in");
+    }, index * 500);
+  });
+});

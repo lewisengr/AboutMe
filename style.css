@@ -144,6 +144,8 @@ article {
   margin: 20px auto;
   font-size: 18px;
   width: 800px;
+  max-width: 100%;
+  text-align: center;
 }
 
 /* style for the div element inside the article */
@@ -251,31 +253,51 @@ article > div {
 
 /* overlay skills images with text */
 .skills-overlay {
-  position: absolute;
-  margin-top: 19.5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background: rgba(255, 255, 255, 0.527);
   padding: 30px;
   border-radius: 15px;
   backdrop-filter: blur(5px);
-  text-align: center;
-  width: 45%;
+  width: 80%;
+  max-width: 800px;
+  margin: auto;
+  margin-top: 7%;
 }
 
-/* text section used to display content over the images */
-.texts-sections {
-  position: absolute;
-  margin-top: 16.5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(255, 255, 255, 0.527);
-  padding: 30px;
-  border-radius: 18px;
-  backdrop-filter: blur(2.5px);
+.skills-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.skills-table {
+  margin: 20px 0;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* specific styles for table headers and cells */
+.skills-overlay th,
+.skills-overlay td {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.838);
+  border: 1.5px solid #1f1818;
   text-align: center;
-  width: 45%;
-  line-height: 1.4;
+}
+
+/* styling for table header */
+.skills-overlay th {
+  font-weight: bold;
+}
+
+/* specific heading styles */
+.skills-overlay h3 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #333;
 }
 
 /* paragraph specificity for the texts sections */
@@ -287,30 +309,16 @@ article > div {
   border-radius: 10px;
 }
 
-/* specific heading styles */
-.skills-overlay h3 {
-  margin-bottom: 20px;
-  font-size: 28px;
-  color: #333;
-}
-
-/* table within skills overlay */
-.skills-overlay table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-/* specific styles for table headers and cells */
-.skills-overlay th,
-.skills-overlay td {
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.838);
-  border: 1.5px solid #1f1818;
-}
-
-/* styling for table header */
-.skills-overlay th {
-  font-weight: bold;
+/* Additional styling for the overlay text */
+.texts-sections {
+  margin-top: 12%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.527);
+  padding: 30px;
+  border-radius: 18px;
+  backdrop-filter: blur(2.5px);
+  text-align: center;
+  line-height: 1.4;
 }
 
 /* adjusted scrolling position to prevent covered content */
@@ -354,6 +362,19 @@ section {
   display: flex;
   justify-content: space-between;
   margin: 3% 35px;
+}
+
+/* general fade-in transition class */
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+/* initial hidden state */
+.fade-init {
+  opacity: 0;
+  transform: translateY(20px);
 }
 
 /* wrapper for each card (or overall image) */
