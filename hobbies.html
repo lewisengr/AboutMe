@@ -110,65 +110,6 @@
       </div>
     </div>
 
-    <script>
-      // select the toggle button
-      const toggleBtn = document.querySelector(".toggle_btn");
-      const toggleBtnIcon = document.querySelector(".toggle_btn i");
-      const dropDownMenu = document.querySelector(".dropdown_menu");
-
-      toggleBtn.onclick = function () {
-        dropDownMenu.classList.toggle("open");
-        const isOpen = dropDownMenu.classList.contains("open");
-        toggleBtnIcon.classList = isOpen
-          ? "fa-solid fa-xmark"
-          : "fa-solid fa-bars";
-      };
-
-      // Modal functionality
-      const modal = document.getElementById("contactModal");
-      const openModalBtn = document.getElementById("openContactModal");
-      const openModalBtnDropdown = document.getElementById(
-        "openContactModalDropdown"
-      );
-      const closeModalBtn = document.querySelector(".close");
-
-      function openModal() {
-        modal.style.display = "block";
-        document.body.classList.add("no-scroll");
-      }
-
-      function closeModal() {
-        modal.style.display = "none";
-        document.body.classList.remove("no-scroll");
-      }
-
-      if (openModalBtn) {
-        openModalBtn.onclick = function () {
-          openModal();
-          dropDownMenu.classList.remove("open"); // Close the dropdown menu
-          toggleBtnIcon.classList = "fa-solid fa-bars";
-        };
-      }
-
-      if (openModalBtnDropdown) {
-        openModalBtnDropdown.onclick = function () {
-          openModal();
-          dropDownMenu.classList.remove("open"); // Close the dropdown menu
-          toggleBtnIcon.classList = "fa-solid fa-bars";
-        };
-      }
-
-      if (closeModalBtn) {
-        closeModalBtn.onclick = function () {
-          closeModal();
-        };
-      }
-
-      window.onclick = function (event) {
-        if (event.target == modal) {
-          closeModal(); // Close modal if clicking outside of it
-        }
-      };
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>

@@ -369,7 +369,7 @@ section {
   position: relative;
 }
 
-/* adds animation for images moving when mouse is hovered over */
+/* transition for images moving when mouse is hovered over */
 .friends-wrapper:hover .friends-images {
   transform: scale(1.035);
 }
