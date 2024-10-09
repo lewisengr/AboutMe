@@ -17,15 +17,21 @@ const openModalBtnDropdown = document.getElementById(
 );
 const closeModalBtn = document.querySelector(".close");
 
-// method to open modal
+// method to open modal with fade-in
 function openModal() {
-  modal.style.display = "block";
+  modal.style.display = "block"; // Make sure modal is visible
+  setTimeout(() => {
+    modal.classList.add("show"); // Trigger the fade-in effect
+  }, 10); // Small delay to ensure the modal is visible before applying the fade
   document.body.classList.add("no-scroll");
 }
 
-// method to close modal
+// method to close modal with fade-out
 function closeModal() {
-  modal.style.display = "none";
+  modal.classList.remove("show"); // Trigger the fade-out effect
+  setTimeout(() => {
+    modal.style.display = "none"; // Hide the modal after the fade-out is done
+  }, 500); // Delay matches the transition duration in CSS
   document.body.classList.remove("no-scroll");
 }
 
@@ -63,16 +69,14 @@ window.onclick = function (event) {
 
 // fade-in class to .friends-container when page loads
 document.addEventListener("DOMContentLoaded", function () {
-  // for specifically friends-container elements
   const friendsContainers = document.querySelectorAll(".friends-container");
   friendsContainers.forEach((container, index) => {
     setTimeout(() => {
       container.classList.remove("fade-init");
       container.classList.add("fade-in");
-    }, index * 1000); // timing for stagger effect
+    }, index * 1000);
   });
 
-  // Handle fade-in for fade-init elements
   const fadeInitElements = document.querySelectorAll(".fade-init");
   fadeInitElements.forEach((element, index) => {
     setTimeout(() => {

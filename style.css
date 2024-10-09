@@ -430,6 +430,13 @@ section {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.modal.show {
+  display: block;
+  opacity: 1;
 }
 
 .modal-content {
@@ -439,6 +446,12 @@ section {
   border-radius: 15px;
   width: 80%;
   max-width: 500px;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(-30px);
+}
+
+.modal.show .modal-content {
+  transform: translateY(0);
 }
 
 .close {
