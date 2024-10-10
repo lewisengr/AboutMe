@@ -130,7 +130,7 @@ body {
 
 /* style for the beach image */
 .beach-image {
-  background: url(images/pretty-beach-5e5g29dp3opyakdx.jpg);
+  background: url(images/home/pretty-beach-5e5g29dp3opyakdx.jpg);
   background-size: cover;
   background-position: center;
   height: 350px;
@@ -334,7 +334,7 @@ section {
 /* --- PHOTOS PAGE --- */
 /* background and layout for first family image (puerto vallarta) */
 .family-1 {
-  background: url(images/IMG_3560.JPEG);
+  background: url(images/photos/IMG_3560.JPEG);
   background-size: cover;
   background-position: center;
   border-radius: 20px;
@@ -358,23 +358,10 @@ section {
 }
 
 /* container styles for friends section */
-.friends-container {
+.f-container {
   display: flex;
   justify-content: space-between;
   margin: 3% 35px;
-}
-
-/* general fade-in transition class */
-.fade-in {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 1.5s ease, transform 1.5s ease;
-}
-
-/* initial hidden state */
-.fade-init {
-  opacity: 0;
-  transform: translateY(20px);
 }
 
 /* wrapper for each card (or overall image) */
@@ -418,6 +405,24 @@ section {
   background-color: rgba(223, 227, 221, 0.432);
   padding: 10px;
   border-radius: 10px;
+}
+
+/* --- Hobbies Page --- */
+/* general fade-in transition class */
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+/* initial hidden state */
+.fade-init {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.hobbies .friends-wrapper {
+  margin-top: 80px;
 }
 
 /* --- MODAL CONTAINER FOR CONTACT INFO --- */
