@@ -556,11 +556,6 @@ section {
   margin-top: 10px;
 }
 
-/* .timeline-content img:hover {
-  transform: scale(1.035);
-  transition: transform 0.3s ease;
-} */
-
 .timeline-content img {
   transition: transform 0.3s ease;
 }
