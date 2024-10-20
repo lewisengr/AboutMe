@@ -85,3 +85,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }, index * 500);
   });
 });
+
+// fade in vertical line after 5 sec
+setTimeout(() => {
+  const timeline = document.querySelector(".timeline");
+  if (timeline) {
+    timeline.classList.remove("fade-init");
+    timeline.classList.add("fade-in");
+  }
+}, 3100);

@@ -407,7 +407,6 @@ section {
   border-radius: 10px;
 }
 
-/* --- Hobbies Page --- */
 /* general fade-in transition class */
 .fade-in {
   opacity: 1;
@@ -421,6 +420,7 @@ section {
   transform: translateY(20px);
 }
 
+/* --- Hobbies Page --- */
 .hobbies .friends-wrapper {
   margin-top: 80px;
 }
@@ -478,4 +478,93 @@ section {
   height: auto;
   margin-right: 8px;
   vertical-align: middle;
+}
+
+/* --- IMPORTANT EVENTS PAGE --- */
+/* timeline container */
+.timeline {
+  position: relative;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 20px 20px;
+  margin-top: 8%;
+  margin-bottom: 3%;
+  background-color: #bfcbcb0f;
+}
+
+/* timeline event container */
+.timeline-event {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+/* timeline content box */
+.timeline-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 15px 25px;
+  background-color: rgba(137, 192, 216, 0.336);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.185);
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Vertical line for timeline */
+.timeline:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background-color: #54676b66;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.timeline.fade-in:before {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* position content alternately left & right */
+.timeline-event:nth-child(even) .timeline-content {
+  order: 2;
+}
+/* align content to left for 1 & 3 */
+.timeline-event:nth-child(odd) .timeline-content {
+  align-items: flex-start;
+}
+/* align content to right for 2 & 4 */
+.timeline-event:nth-child(even) .timeline-content {
+  align-items: flex-end;
+}
+/* for all even numbered */
+.timeline-event:nth-child(even) {
+  justify-content: flex-end;
+}
+
+/* style for image */
+.timeline-content img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+/* .timeline-content img:hover {
+  transform: scale(1.035);
+  transition: transform 0.3s ease;
+} */
+
+.timeline-content img {
+  transition: transform 0.3s ease;
+}
+
+.timeline-content img:hover {
+  transform: scale(1.035);
 }
